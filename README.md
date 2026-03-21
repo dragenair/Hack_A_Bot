@@ -13,25 +13,7 @@ Robosoc Hack A Bot 2026 21st march. https://hackabot-2026.com/live/
 ---
 
 ## the Projects
-Catapult - Design an automated catapult that senses target distance adjusts its launch mechanism and hits targets accurately at varying ranges.
-Fully automated catapult
-
-Platformer - to build a robot which can cross gaps.
-
-## 🚀 What We Are Doing
-We are designing and building a mobile robot from scratch. This project involves integrating custom hardware, real-time embedded software, and physical logic gates to navigate the RoboSoc challenge environment.
-
-### 📐 Mechanical & CAD Design
-Starting with a blank canvas, we are prototyping the physical bot:
-* **Custom Chassis:** 3D-modeled parts (STL/STEP) designed for a low center of gravity.
-* **Actuation:** Utilizing a **PCA9685** 16-channel driver to manage high-precision servo movements.
-* **Component Housing:** Custom mounts for the **ESP32/Arduino** and power rails.
-
-### 💻 Programming & Control
-The software stack is built for speed and responsiveness:
-* **Embedded Firmware:** Developed in **C++/Arduino** for low-latency motor response.
-* **Data Processing:** Using **Python** (NumPy/Plotly) for sensor data analysis and performance tuning.
-* **Navigation Logic:** Implementation of control loops to handle obstacle detection and movement.
+Rover - to build a remort controlled rover to pick up objects
 
 ---
 
@@ -40,6 +22,22 @@ The software stack is built for speed and responsiveness:
 * `/cad` - 3D models and assembly files.
 
 ---
+
+## 📚 References & Resources
+
+This project was built using the following resources and documentation:
+
+### 🔧 Hardware & Components
+* **Gripper idea:** [YT: tazer engineering project](https://www.youtube.com/watch?v=rel5jg5wjvk) - Inspiration for the gripper design
+* **RoboSoc Wiki:** [UoM RoboSoc Hack-a-Bot Guide](https://hackabot-2026.com/live/) - Competition rules and base component specs.
+
+### 💻 Software & Logic
+* **NumPy Documentation:** [Numerical Python](https://numpy.org/doc/) - Referenced for trajectory and sensor data processing.
+* **Plotly Graphing:** [Plotly Python Open Source Graphing Library](https://plotly.com/python/) - Used for real-time telemetry visualization.
+* **VHDL Tutorial:** [NANDland](https://nandland.com/) - For gate-level logic and state machine implementation.
+
+### 📐 Mechanical Design
+* **SolidWorks/Fusion 360 Tutorials:** [Autodesk Learning](https://help.autodesk.com/) - Referenced for 3D-printing tolerances and chassis assembly.
 
 ## 🛠️ Build Status
 - [x] Initial Chassis Design
