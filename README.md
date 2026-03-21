@@ -1,5 +1,7 @@
 # Hack_A_Bot
 Robosoc Hack A Bot 2026 21st march. https://hackabot-2026.com/live/
+[slides](https://docs.google.com/presentation/d/13XaV4SNAtPKBKtwS-vsrUg2YQWznqjH9hkywtwkcGxk/edit?slide=id.g39648405b02_0_0#slide=id.g39648405b02_0_0)
+
 
 ## 👥 Our Team
 
@@ -36,11 +38,7 @@ This project was built using the following resources and documentation:
 
 ### Documentation
 * **Documentation for L291 Shield** [The documentation L291 Shield](https://akizukidenshi.com/goodsaffix/MMS0293-01_L293D_R1.0.pdf) - Documentation
-* ** ** []()
 
-
-### 📐 Mechanical Design
-* **SolidWorks/Fusion 360 Tutorials:** [Autodesk Learning](https://help.autodesk.com/) - Referenced for 3D-printing tolerances and chassis assembly.
 
 ## 🛠️ Build Status
 - [x] Initial Chassis Design
