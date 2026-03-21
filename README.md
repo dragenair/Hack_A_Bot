@@ -30,6 +30,7 @@ This project was built using the following resources and documentation:
 ### 🔧 Hardware & Components
 * **Gripper idea:** [YT: tazer engineering project](https://www.youtube.com/watch?v=rel5jg5wjvk) - Inspiration for the gripper design
 * **RoboSoc Wiki:** [UoM RoboSoc Hack-a-Bot Guide](https://hackabot-2026.com/live/) - Competition rules and base component specs.
+* **Documentation for L291 Shield** [https://akizukidenshi.com/goodsaffix/MMS0293-01_L293D_R1.0.pdf](url)
 
 ### 💻 Software & Logic
 * **NumPy Documentation:** [Numerical Python](https://numpy.org/doc/) - Referenced for trajectory and sensor data processing.
