@@ -1,0 +1,17 @@
+Short Video: https://youtu.be/rel5jg5wjvk
+Technical Video: www.youtube.com/@TazerTechnical
+
+Smart Gripper: 
+-soft jaws that adapt to the objects shape
+-temperature sensing
+-grip strength sensing
+
+Parts:
+-smart servo (waveshare ST3215):
+https://s.click.aliexpress.com/e/_c36CX339
+-servo (dsservo DS3230 Pro 270):
+https://s.click.aliexpress.com/e/_c32NKmwr
+-EDS foam (about 3K resistance per piece): local electronics eshop
+
+
+*If the links don't work, just search the part name on aliexpress, or anywhere else.
