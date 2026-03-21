@@ -1,5 +1,5 @@
 # Hack_A_Bot
-Robosoc Hack A Bot 2026 21st march. We would be making a robot from scratch from CAD, Programming as well as testing
+Robosoc Hack A Bot 2026 21st march. https://hackabot-2026.com/live/
 
 ## 👥 Our Team
 
@@ -16,7 +16,7 @@ Robosoc Hack A Bot 2026 21st march. We would be making a robot from scratch from
 Catapult - Design an automated catapult that senses target distance adjusts its launch mechanism and hits targets accurately at varying ranges.
 Fully automated catapult
 
-Platformer - to build a robot which can cross gaps
+Platformer - to build a robot which can cross gaps.
 
 ## 🚀 What We Are Doing
 We are designing and building a mobile robot from scratch. This project involves integrating custom hardware, real-time embedded software, and physical logic gates to navigate the RoboSoc challenge environment.
@@ -33,19 +33,11 @@ The software stack is built for speed and responsiveness:
 * **Data Processing:** Using **Python** (NumPy/Plotly) for sensor data analysis and performance tuning.
 * **Navigation Logic:** Implementation of control loops to handle obstacle detection and movement.
 
-### 🔢 Digital Logic & Circuitry
-To ensure the bot behaves predictably, we’ve implemented hardware-level logic:
-* **Digital Logic:** Utilizing NAND/NOR gate configurations for safety-stop interrupts.
-* **VHDL Modules:** Custom logic blocks to offload signal processing from the main microcontroller.
-* **Power Management:** Hand-wired circuits to prevent voltage drops during high-torque maneuvers.
-
 ---
 
 ## 📂 Project Structure
-* `/src` - Firmware and C++ source code.
+* `/src` - Programming files.
 * `/cad` - 3D models and assembly files.
-* `/logic` - VHDL files and digital logic diagrams.
-* `/scripts` - Python tools for testing and debugging.
 
 ---
 
