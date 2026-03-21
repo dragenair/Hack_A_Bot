@@ -2,10 +2,10 @@
 #include <SoftwareSerial.h>
 
 
-AF_DCMotor motor1(1, MOTOR12_1KHZ);  
-AF_DCMotor motor2(2, MOTOR12_1KHZ);
-AF_DCMotor motor3(3, MOTOR34_1KHZ); 
-AF_DCMotor motor4(4, MOTOR34_1KHZ);  
+AF_DCMotor motor1(1, MOTOR12_1KHZ);   // front left
+AF_DCMotor motor2(2, MOTOR12_1KHZ);   // back left
+AF_DCMotor motor3(3, MOTOR34_1KHZ);   // front right
+AF_DCMotor motor4(4, MOTOR34_1KHZ);   // back right
 
 void setup() {
   // put your setup code here, to run once:
@@ -24,4 +24,39 @@ void loop() {
     motor3.run(FORWARD);
     motor4.run(FORWARD);
 
+}
+
+void moveforward(){
+    motor1.run(FORWARD);
+    motor2.run(FORWARD);
+    motor3.run(FORWARD);
+    motor4.run(FORWARD);
+}
+
+void moveBackward() {
+  motor1.run(BACKWARD);
+  motor2.run(BACKWARD);
+  motor3.run(BACKWARD);
+  motor4.run(BACKWARD);
+}
+
+void turnLeft(){
+    motor1.run(FORWARD);
+    motor2.run(FORWARD);
+    motor3.run(RELEASE);
+    motor4.run(RELEASE);
+}
+
+void turnRight(){
+    motor1.run(RELEASE);
+    motor2.run(RELEASE);
+    motor3.run(FORWARD);
+    motor4.run(FORWARD);
+}
+
+void stop() {
+  motor1.run(RELEASE);
+  motor2.run(RELEASE);
+  motor3.run(RELEASE);
+  motor4.run(RELEASE);
 }
