@@ -3,7 +3,7 @@
 #include <Servo.h>
 #include <nRF24L01.h>
 
-RF24 radio(9, 10);
+//RF24 radio(9, 10);
 
 const byte address[6] = "00001";
 
@@ -26,7 +26,7 @@ Servo servo2;
 
 void setup() {
   // put your setup code here, to run once:
-
+  /*
   Serial.begin(9600);
 
   radio.begin();
@@ -34,6 +34,8 @@ void setup() {
   radio.setPALevel(RF24_PA_MIN);
 
   radio.startListening();
+
+  */
 
   motor1.setSpeed(255);
   motor2.setSpeed(255);
@@ -44,9 +46,20 @@ void setup() {
   servo2.attach(9);     // Grip
 
   servo1.write(90);
-  servo2.write(90);
+  servo2.write(0);
 }
 
+void loop(){
+  moveforward();
+  delay(2000);
+  grip();
+  delay(6000);
+  release();
+  delay(500);
+
+}
+
+/*
 void loop() {
 
   if (radio.available()) {
@@ -69,6 +82,7 @@ void loop() {
     }
   }
 }
+*/
 
 void moveforward(){
     motor1.run(FORWARD);
@@ -106,21 +120,30 @@ void stop() {
 }
 
 void grab(){
-  servo2.write(90);
-  delay(1000);
-  servo2.write(180);
+  servo2.write(80);
 }
 
 void release(){
-  servo2.write(90);
-  delay(1000);
-  servo2.write(180);
+  servo2.write(0);
 }
 
 void liftup(){
-
+  servo1.write(90);
 }
 
 void putdown(){
+  servo1.write(0);
+}
 
+void grip(){
+  putdown();
+  delay(1000);
+
+  grab();
+  delay(1000);
+
+  liftup();
+  //delay(4000);
+  //release();
+  //delay(300);
 }
