@@ -1,6 +1,20 @@
 #include <AFMotor.h>
 #include <SoftwareSerial.h>
 #include <Servo.h>
+#include <nRF24L01.h>
+
+RF24 radio(9, 10);
+
+const byte address[6] = "00001";
+
+struct Data {
+  bool up;
+  bool down;
+  bool left;
+  bool right;
+};
+
+Data data;
 
 AF_DCMotor motor1(1, MOTOR12_1KHZ);   // front left
 AF_DCMotor motor2(2, MOTOR12_1KHZ);   // back left
@@ -10,10 +24,17 @@ AF_DCMotor motor4(4, MOTOR34_1KHZ);   // back right
 Servo servo1;
 Servo servo2;
 
-
-
 void setup() {
   // put your setup code here, to run once:
+
+  Serial.begin(9600);
+
+  radio.begin();
+  radio.openReadingPipe(0, address);
+  radio.setPALevel(RF24_PA_MIN);
+
+  radio.startListening();
+
   motor1.setSpeed(255);
   motor2.setSpeed(255);
   motor3.setSpeed(255);
@@ -24,20 +45,29 @@ void setup() {
 
   servo1.write(90);
   servo2.write(90);
-
-
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-    
-    servo2.write(90);
-    delay(1000);
-    servo2.write(180);
-    delay(1000);
-    
 
+  if (radio.available()) {
+    radio.read(&data, sizeof(data));
 
+    if (data.up) {
+      moveforward();
+    }
+    else if (data.down) {
+      moveBackward();
+    }
+    else if (data.left) {
+      turnLeft();
+    }
+    else if (data.right) {
+      turnRight();
+    }
+    else {
+      stop();
+    }
+  }
 }
 
 void moveforward(){
@@ -76,11 +106,15 @@ void stop() {
 }
 
 void grab(){
-
+  servo2.write(90);
+  delay(1000);
+  servo2.write(180);
 }
 
 void release(){
-
+  servo2.write(90);
+  delay(1000);
+  servo2.write(180);
 }
 
 void liftup(){
